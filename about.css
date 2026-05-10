@@ -1,0 +1,316 @@
+/* GLOBAL */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:#f4f9ff;
+  color:#333;
+  line-height:1.7;
+  overflow-x:hidden;
+}
+
+/* HERO SECTION */
+
+.hero{
+  height:70vh;
+
+  background:
+  linear-gradient(rgba(5, 89, 186, 0.75),
+  rgba(10, 129, 121, 0.75)),
+  url('images/hospital.jpg');
+
+  background-size:cover;
+  background-position:center;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+
+  color:white;
+  padding:20px;
+}
+
+.hero-content{
+  max-width:700px;
+  animation:fadeIn 1.5s ease;
+}
+
+.small-text{
+  display:inline-block;
+  background:rgba(255,255,255,0.15);
+  padding:8px 20px;
+  border-radius:30px;
+  margin-bottom:20px;
+  font-size:15px;
+  letter-spacing:1px;
+}
+
+.hero-content h1{
+  font-size:70px;
+  margin-bottom:20px;
+  font-weight:bold;
+}
+
+.hero-content p{
+  font-size:20px;
+  margin-bottom:30px;
+}
+
+.hero-btn{
+  display:inline-block;
+  padding:14px 35px;
+  background:white;
+  color:#0a4da3;
+  text-decoration:none;
+  border-radius:40px;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+.hero-btn:hover{
+  background:#0a4da3;
+  color:white;
+  transform:scale(1.05);
+}
+
+/* ABOUT SECTION */
+
+.about-section{
+  width:85%;
+  margin:100px auto;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:60px;
+  flex-wrap:wrap;
+}
+
+.about-image{
+  flex:1;
+}
+
+.about-image img{
+  width:100%;
+  border-radius:20px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.2);
+  transition:0.4s;
+}
+
+.about-image img:hover{
+  transform:scale(1.03);
+}
+
+.about-text{
+  flex:1;
+}
+
+.section-tag{
+  color:#0a4da3;
+  font-weight:bold;
+  font-size:18px;
+}
+
+.about-text h2{
+  font-size:45px;
+  color:#062c5c;
+  margin:15px 0 25px;
+  line-height:1.3;
+}
+
+.about-text p{
+  margin-bottom:18px;
+  font-size:17px;
+  color:#555;
+}
+
+/* INFO SECTION */
+
+.info-section{
+  width:85%;
+  margin:50px auto 100px;
+
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+}
+
+.info-box{
+  background:white;
+  padding:40px 30px;
+  border-radius:20px;
+
+  text-align:center;
+
+  box-shadow:0 5px 20px rgba(0,0,0,0.1);
+
+  transition:0.4s;
+  border-bottom:5px solid #4e688a;
+}
+
+.info-box:hover{
+  transform:translateY(-12px);
+}
+
+.icon{
+  font-size:50px;
+  margin-bottom:20px;
+}
+
+.info-box h3{
+  font-size:30px;
+  color:#0a4da3;
+  margin-bottom:15px;
+}
+
+/* STATS */
+
+.stats{
+  /* background:#0a4da3; */
+  background: #649dd6;
+  color:white;
+
+  padding:80px 10%;
+
+  display:flex;
+  justify-content:space-around;
+  flex-wrap:wrap;
+  text-align:center;
+  gap:30px;
+}
+
+.stat-box{
+  transition:0.3s;
+}
+
+.stat-box:hover{
+  transform:scale(1.1);
+}
+
+.stat-box h1{
+  font-size:60px;
+  margin-bottom:10px;
+}
+
+.stat-box p{
+  font-size:20px;
+}
+
+/* FOOTER */
+
+footer{
+  background:#062c5c;
+  color:white;
+  text-align:center;
+  padding:30px;
+}
+
+footer p{
+  font-size:16px;
+}
+
+/* ANIMATIONS */
+
+@keyframes fadeIn{
+
+  from{
+    opacity:0;
+    transform:translateY(30px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+}
+
+.fade-left{
+  animation:fadeLeft 1.5s ease;
+}
+
+.fade-right{
+  animation:fadeRight 1.5s ease;
+}
+
+.fade-up{
+  animation:fadeUp 1.5s ease;
+}
+
+@keyframes fadeLeft{
+
+  from{
+    opacity:0;
+    transform:translateX(-50px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateX(0);
+  }
+
+}
+
+@keyframes fadeRight{
+
+  from{
+    opacity:0;
+    transform:translateX(50px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateX(0);
+  }
+
+}
+
+@keyframes fadeUp{
+
+  from{
+    opacity:0;
+    transform:translateY(50px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+  .hero{
+    height:60vh;
+  }
+
+  .hero-content h1{
+    font-size:45px;
+  }
+
+  .hero-content p{
+    font-size:18px;
+  }
+
+  .about-section{
+    flex-direction:column;
+  }
+
+  .about-text h2{
+    font-size:35px;
+  }
+
+}
